@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ver Municipios</title>
+</head>
+<body>
+    <h1>Lista de Municipios</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Ciudad</th>
+                <th>RFC</th>
+                <th>Gobierno</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for municipio in municipios %}
+            <tr>
+                <td>{{ municipio.name }}</td>
+                <td>{{ municipio.city }}</td>
+                <td>{{ municipio.rfc }}</td>
+                <td>{{ municipio.government }}</td>
+                <td>{{ municipio.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

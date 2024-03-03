@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from .models import Municipality
 
 # Create your views here.
 
@@ -19,5 +20,5 @@ def dashboard(request):
     return render(request, 'dashboard/dashboard.html')
 
 def ver_municipios(request):
-    # Lógica para mostrar los municipios
-    return render(request, 'gestion_municipio/mod_municipality/base.html') #ver_municipios
+    municipios = Municipality.objects.all()
+    return render(request, 'gestion_municipio/view_municipality/view_municipality.html', {'municipios': municipios}) #ver_municipios
