@@ -23,6 +23,10 @@
                 <td>{{ municipio.rfc }}</td>
                 <td>{{ municipio.government }}</td>
                 <td>{{ municipio.status }}</td>
+                <td>
+                    <a href="{% url 'modificar_municipio' municipio.id %}">Modificar</a> <!-- Botón de Modificar -->
+                    <a href="{% url 'eliminar_municipio' municipio.id %}">Eliminar</a> <!-- Botón de Eliminar -->
+                </td>
             </tr>
             {% endfor %}
         </tbody>
